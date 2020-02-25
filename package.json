@@ -1,6 +1,6 @@
 {
   "name": "@tschallacka/oc.foundation.controlutils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Adds dispose controls to elements",
   "main": "oc.foundation.controlutils.js",
   "scripts": {
