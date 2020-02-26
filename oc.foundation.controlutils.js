@@ -2,10 +2,10 @@ var $ = require('jquery');
 
 module.exports = {
 	markDisposable: function(el) {
-            if(el instanceof $) {
-               el = el.get(0);
+        if(!(el instanceof $)) {
+        	el = $(el)
 	    }
-	    el.setAttribute('data-disposable', '')
+	    el.attr('data-disposable', '')
 	},
 	
 	/*
@@ -14,16 +14,15 @@ module.exports = {
 	 * event.
 	 */
 	disposeControls: function(container) {
-	    if(container instanceof $) {
-		container = container.get(0);
+		
+	    if(!(container instanceof $)) {
+	    	container = $(container);
 	    }
-	    var controls = container.querySelectorAll('[data-disposable]')
+	    var controls = container.find('[data-disposable]')
+	    controls.triggerHandler('dispose-control');
 	    
-	    for (var i=0, len=controls.length; i < len; i++) {
-	        $(controls[i]).triggerHandler('dispose-control')
-	    }
-	    if (container.hasAttribute('data-disposable')) {
-	        $(container).triggerHandler('dispose-control')
+	    if (container.is('[data-disposable]')) {
+	    	container.triggerHandler('dispose-control')
 	    }
 	}
 }

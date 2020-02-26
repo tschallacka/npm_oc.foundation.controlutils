@@ -1,6 +1,6 @@
 {
   "name": "@tschallacka/oc.foundation.controlutils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Adds dispose controls to elements",
   "main": "oc.foundation.controlutils.js",
   "scripts": {
@@ -19,7 +19,13 @@
   "dependencies": {
     "jquery": "*"
   },
-  "author": "Tschallacka, OctoberCMS",
+  "author": "Tschallacka",
+  "contributors": [
+    {
+      "name": "OctoberCMS",
+      "url": "https://www.octobercms.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tschallacka/npm_oc.foundation.controlutils/issues"
